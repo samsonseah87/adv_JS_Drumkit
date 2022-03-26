@@ -13,7 +13,7 @@ for(var i = 0; i < document.querySelectorAll('.drum').length; i++) {
 
     var buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
-    buttonAnimantion(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
 
   });
 }
@@ -25,7 +25,7 @@ for(var i = 0; i < document.querySelectorAll('.drum').length; i++) {
 
 document.addEventListener ('keydown', function(event) {
     makeSound(event.key);
-    buttonAnimantion(event.key);
+    buttonAnimation(event.key);
   }
 );
 
@@ -73,9 +73,9 @@ function makeSound (key) {
 };
 
 function buttonAnimation(currentKey) {
-  var activeButton = document.querySelector('.' + currentKey);
+  var activeButton = document.querySelector('.'+currentKey);
   activeButton.classList.add('pressed');
   setTimeout(function() {
-    activeButton.classList.add.remove('pressed');
+    activeButton.classList.remove('pressed');
   }, 100);
 }
